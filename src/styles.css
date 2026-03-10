@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  background: #05080d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(61, 217, 179, 0.16), transparent 24%),
+    radial-gradient(circle at right 20%, rgba(43, 98, 255, 0.14), transparent 26%),
+    linear-gradient(180deg, #071018 0%, #05080d 42%, #09131a 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.page-background {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 95%);
+  pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero-card,
+.panel-card,
+.metric-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 15, 20, 0.84);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 48px rgba(0, 0, 0, 0.24);
+}
+
+.hero-card {
+  margin-bottom: 12px;
+}
+
+.panel-card {
+  margin-bottom: 12px;
+}
+
+.metric-card .ant-statistic {
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-card .ant-card-body {
+  padding-top: 8px;
+  background:
+    linear-gradient(180deg, rgba(9, 22, 28, 0.94), rgba(6, 14, 20, 0.88)),
+    radial-gradient(circle at top right, rgba(66, 214, 164, 0.08), transparent 42%);
+  border-radius: 0 0 10px 10px;
+}
+
+.error-banner {
+  margin-bottom: 12px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #3dd9b3;
+  font-size: 11px;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td,
+.ant-table-wrapper .ant-table-thead > tr > th {
+  white-space: nowrap;
+}
+
+.tweet-link {
+  color: #8ae8ff;
+  display: inline-block;
+  max-width: 520px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  text-decoration: none;
+}
+
+.tweet-link:hover {
+  color: #c9fff2;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 16px;
+  }
+}
